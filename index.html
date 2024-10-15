@@ -13,22 +13,44 @@
       <label for="number2Input">Number 2</label>
       <input id="number2Input" type="number" />
       <button onclick="add()">Add</button>
-      <button onclick="subtract()" >Subtract</button>
-      <button onclick="multiply()" >Multiply</button>
-      <button onclick="divide()" >Divide</button>
+      <button onclick="subtract()">Subtract</button>
+      <button onclick="multiply()">Multiply</button>
+      <button onclick="divide()">Divide</button>
       <label for="answerInput">Answer</label>
-      <input readonly id = "answerInput" type="number">
+      <input readonly id="answerInput" type="number" />
     </main>
-    <script>    
-    let number1Input = document.getElementById ("number1Input");
-    let number2Input = document.getElementById ("number2Input");
-        function add() {
-            let number1 = Number (number1Input.value);
-            let number2 = Number (number2Input.value);
-            let sum = number1 + number2;
-        }
+    <script>
+      let number1Input = document.getElementById("number1Input");
+      let number2Input = document.getElementById("number2Input");
+      let answerInput = document.getElementById("answerInput");
+      function add() {
+        let number1 = Number(number1Input.value);
+        let number2 = Number(number2Input.value);
+        let sum = number1 + number2;
+        answerInput.value = sum;
         console.log(sum);
-        
+      }
+      function subtract() {
+        let number1 = Number(number1Input.value);
+        let number2 = Number(number2Input.value);
+        let difference = number1 - number2;
+        answerInput.value = difference;
+        console.log(difference);
+      }
+      function multiply() {
+        let number1 = Number(number1Input.value);
+        let number2 = Number(number2Input.value);
+        let product = number1 * number2;
+        answerInput.value = product;
+        console.log(product);
+      }
+      function divide() {
+        let number1 = Number(number1Input.value);
+        let number2 = Number(number2Input.value);
+        let division = number1 / number2;
+        answerInput.value = division;
+        console.log(division);
+      }
     </script>
   </body>
 </html>
