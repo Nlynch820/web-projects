@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark" >
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,6 +8,8 @@
   </head>
   <body>
     <main>
+      <article>
+      <h1>Calculator</h1>
       <label for="number1Input">Number 1</label>
       <input id="number1Input" type="number" />
       <label for="number2Input">Number 2</label>
@@ -18,8 +20,10 @@
       <button onclick="divide()">Divide</button>
       <label for="answerInput">Answer</label>
       <input readonly id="answerInput" type="number" />
+    </article>
     </main>
     <script>
+      "use strict";
       let number1Input = document.getElementById("number1Input");
       let number2Input = document.getElementById("number2Input");
       let answerInput = document.getElementById("answerInput");
