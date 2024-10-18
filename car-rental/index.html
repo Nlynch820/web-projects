@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ACME Car Rental</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css" />
+  </head>
+  <body>
+    <main>
+      <h1>ACME Car Rental</h1>
+      <form>
+        <label for="pickupInput">Pick Up Date</label>
+        <input type="date" id="pickupInput" name="pickupDate" />
+
+        <label for="numOfDaysInput">Number of Days: </label>
+        <input type="number" id="numOfDaysInput" name="numOfDays" />
+
+        <h4>Options</h4>
+        <fieldset>
+          <input type="checkbox" name="electronicTollTag" id="tollTagCheckbox" />
+          <label for="tollTagCheckbox">Electronic Toll Tag ($3.95/day)</label>
+
+          <input type="checkbox" name="gps" id="gpsCheckbox" />
+          <label for="gpsCheckbox">GPS ($2.95/day)</label>
+
+          <input type="checkbox" name="roadsideAssistance" id="roadsideCheckbox" />
+          <label for="roadsideCheckbox">Roadside Assistance ($2.95/day)</label>
+        </fieldset>
+        <fieldset>
+          <legend>Under 25?</legend>
+          <input type="radio" name="ageLimit" id="underRadio" />
+          <label for="underRadio">Yes</label>
+          <input type="radio" name="ageLimit" id="overRadio" />
+          <label for="overRadio">No</label>
+        </fieldset>
+
+        <button id="estimateTotalButton" type="button">Estimate Total Cost</button>
+      </form>
+      <br />
+      <div id="totalDisplay">This is the total.</div>
+      <div>
+        <ul>
+          <li>Car Rental</li>
+          <li>Options</li>
+          <li>Under 25 surcharge</li>
+          <br />
+          <li>Total Due</li>
+        </ul>
+      </div>
+    </main>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
